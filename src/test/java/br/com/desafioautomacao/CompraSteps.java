@@ -85,10 +85,10 @@ public class CompraSteps {
 	@BeforeClass
 	public void inicio() {
 	
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		
 		driver = new ChromeDriver(options);
 		
