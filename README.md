@@ -68,7 +68,7 @@ A descricao do desafio consiste em:
 **Subida do projeto para o github como proposto:**
 
 ```sh
-https://github.com/acsmcarlos
+https://github.com/acsmcarlos/Desafio-Automacao
 ```
 ***
 
