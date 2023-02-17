@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CompraSteps {
 	
@@ -85,10 +86,10 @@ public class CompraSteps {
 	@BeforeClass
 	public void inicio() {
 	
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		
 		ChromeOptions options = new ChromeOptions();
-		//options.addArguments("--headless");
+		options.addArguments("--headless");
 		
 		driver = new ChromeDriver(options);
 		
