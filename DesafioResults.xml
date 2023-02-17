@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="21.56" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Realizar uma compra com sucesso" name="Realizar compra com sucesso" time="19.033">
+<testsuite name="Cucumber" time="23.5" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Realizar uma compra com sucesso" name="Realizar compra com sucesso" time="21.579">
 <system-out><![CDATA[
 Given que acesso a pagina de login..........................................passed
 When entro com minhas credenciais de usuario e senha........................passed
@@ -10,7 +10,7 @@ And realizo o checkout......................................................pass
 Then devo finalizar a compra................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Realizar uma compra sem sucesso" name="Realizar compra sem sucesso" time="2.354">
+<testcase classname="Realizar uma compra sem sucesso" name="Realizar compra sem sucesso" time="1.725">
 <system-out><![CDATA[
 Given que acesso a pagina de login..........................................passed
 When entro com minhas credenciais de usuario e senha diferentes.............passed

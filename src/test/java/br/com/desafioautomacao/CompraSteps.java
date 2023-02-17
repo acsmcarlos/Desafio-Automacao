@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -85,7 +86,12 @@ public class CompraSteps {
 	public void inicio() {
 	
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
-		driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		
+		driver = new ChromeDriver(options);
+		
 		driver.get("https://www.saucedemo.com");
 		
 		page = new CompraPage(driver);
