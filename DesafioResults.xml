@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="28.071" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Realizar uma compra com sucesso" name="Realizar compra com sucesso" time="22.754">
+<system-out><![CDATA[
+Given que acesso a pagina de login..........................................passed
+When entro com minhas credenciais de usuario e senha........................passed
+And seleciono um produto....................................................passed
+And adiciono o produto ao carrinho..........................................passed
+And realizo o checkout......................................................passed
+Then devo finalizar a compra................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Realizar uma compra sem sucesso" name="Realizar compra sem sucesso" time="5.091">
+<system-out><![CDATA[
+Given que acesso a pagina de login..........................................passed
+When entro com minhas credenciais de usuario e senha diferentes.............passed
+And adiciono produto diferente ao carrinho..................................passed
+And realizo o checkout......................................................passed
+Then devo visualizar mensagem de erro.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
