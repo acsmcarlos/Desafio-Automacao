@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"junit:DesafioResults.xml"},
+		//plugin = {"junit:DesafioResults.xml"},
 		monochrome = true,
 //		tags = "@CT002",
 		features = "src/test/resources/features",
