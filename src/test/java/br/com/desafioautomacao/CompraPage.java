@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CompraPage {
 
@@ -25,7 +24,7 @@ public class CompraPage {
 		password.sendKeys(senha);
 		btnLogin.click();
 
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "PRODUCTS");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Products");
 	}
 
 	public void filtarProdutoPorZtoA() throws InterruptedException {
@@ -54,10 +53,10 @@ public class CompraPage {
 	public void realizarCheckout() throws InterruptedException {
 
 		driver.findElement(By.className("shopping_cart_link")).click(); // clicando no carrinho
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "YOUR CART");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Your Cart");
 
 		driver.findElement(By.id("checkout")).click(); // clicando no botão checkout
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "CHECKOUT: YOUR INFORMATION");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Checkout: Your Information");
 
 	}
 
@@ -73,14 +72,14 @@ public class CompraPage {
 	
 	public void validandoVendaComSucesso() throws InterruptedException {
 		
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "CHECKOUT: OVERVIEW");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Checkout: Overview");
 		driver.findElement(By.id("finish")).click(); // clicando no botão finish
 
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "CHECKOUT: COMPLETE!");
-		Assert.assertEquals(driver.findElement(By.className("complete-header")).getText(), "THANK YOU FOR YOUR ORDER");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Checkout: Complete!");
+		Assert.assertEquals(driver.findElement(By.className("complete-header")).getText(), "Thank you for your order!");
 
 		driver.findElement(By.id("back-to-products")).click(); // voltando para a tela principal
-		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "PRODUCTS");
+		Assert.assertEquals(driver.findElement(By.className("title")).getText(), "Products");
 	}
 	
 	public void validandoVendaSemSucesso() throws InterruptedException {
